@@ -15,7 +15,7 @@ angular.module('mathMateApp')
 				console.log(error.code);
 			}
 			else if (user) {
-				//window.location.replace('#');
+				window.location.replace('#');
 			}
 			else {
 				var password = $('#password').val();
@@ -23,10 +23,7 @@ angular.module('mathMateApp')
 				auth.login('password', {
 					email: email,
 					password: password
-				}, function() {
-					window.location.replace('#');
 				});
-				
 			}
 		});
 	};
