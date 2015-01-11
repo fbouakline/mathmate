@@ -1,0 +1,39 @@
+#replay{
+	display: none; 
+	position: absolute; 
+	font-weight: 900; font-family: verdana; 
+	left: 500px; 
+	top: 360px; 
+	color: #3BAFDA; 
+	width: 100px;
+}
+#board{
+	position: absolute; 
+	z-index:-99; 
+	left: 840px; 
+	top: 110px; 
+	width:70px;
+}
+
+#points{
+	display: none; 
+	position: absolute; 
+	font-weight: 900; 
+	font-family: verdana; 
+	left: 320px; 
+	top: 360px; 
+	color: white; 
+	width:200px;
+}
+#dart{
+	position: absolute; 
+	z-index:9999; 
+	top:300px;
+}
+#win{
+	position: absolute; 
+	z-index:9999999; 
+	top: 200px;
+	left:120px; 
+	display:none;
+}

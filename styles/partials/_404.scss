@@ -1,0 +1,98 @@
+#container {
+		  position: relative;
+			display: block;
+			margin:auto;
+			height:100%;
+			width: 100%;
+			width:auto;
+			overflow: hidden; 
+      z-index: 1;
+      animation: noise-3 1.5s linear infinite;
+		}
+
+#container:after {
+  animation: noise-1 .2s linear infinite;
+}
+
+		.deloreanblue {
+			height:130%;
+			background:url("../images/404/delorean_blue.png") fixed center;
+			background-repeat: no-repeat;
+			background-size: 130% auto ;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			background-blend-mode: luminosity
+		}
+
+		.deloreanred{
+			height: 130%;
+			background:url("../images/404/delorean_red_2_4.png") fixed center;
+      opacity: .85;
+			background-blend-mode: luminosity;
+			background-repeat: no-repeat;
+			background-size: 130% auto ;
+			-webkit-transform:translateZ(60px);
+			transform:translateZ(60px);
+		}		
+
+
+.text-container{
+  	position: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;  
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    user-select: all;
+    font-size: 1.5em;
+    top: 0;
+    text-shadow: 0 0 30px #111111;
+    }
+
+h1 {
+  font-size: 6em;
+  margin-bottom: -.2em;
+  margin-left: -.2em;
+  font-weight: 900;
+  padding-top: 0;
+}
+
+
+.back {
+  display: block;
+  position: relative;
+  width: 35%;
+  margin: 10px auto 0 auto;
+  overflow: hidden;
+  border-radius: 3px;
+  height: auto;
+  border: 3px solid #fff;
+  transition: all .2s ease-in-out;
+  padding: 10px 0 15px 0;
+}
+
+
+.back:hover {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 1;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}

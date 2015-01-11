@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>404 - Niet gevonden</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+    @import url(http://fonts.googleapis.com/css?family=Exo+2:400,900italic,900);
+    html, body { height:100%; overflow: hidden;}
+        body {
+          background-color: #062525;
+          font-size: 100%;
+           margin:0px;
+           display: block;
+           font-family: 'Exo 2', sans-serif;
+          color: #fff;
+      font-weight: lighter;
+        }
+    
+    </style>
+
+</head>
+
+<body style="background-color: #0b3a3b;">
+
+  <div id="container">
+      <div class="deloreanblue" data-bind="attr: { style:'-moz-transform:perspective(1000px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(0px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg); -webkit-transform:perspective(1000px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(0px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }">
+				<div class="deloreanred"></div>
+			</div>
+</div>   
+
+<div class="text-container">
+    <h1>404</h1>
+    <p>I guess you aren't ready for that page yet...<br /> but your kids are gonna' love it.</p>
+    <div class="back">
+      Back
+    </div>
+
+</div>
+
+  <script src='bower_components/jquery/dist/jquery.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/127764/knockout-3.1.0.js'></script>
+
+  <script src="scripts/404.js"></script>
+
+</body>
+
+</html>

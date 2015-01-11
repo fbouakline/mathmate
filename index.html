@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>MathMate</title>
+    <meta name="description" content="">
+    <meta name="author" content="Fouad Bouakline">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/Bootflat/bootflat/css/bootflat.css" />
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="mathMateApp" style="background-color:  #f1f2f6;" ng-controller="menuController">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    
+    <div>
+      <div class="row" style="margin-top:0.5em" >
+        <div class="col-md-9" style="padding-right:50px;" ng-class="{'col-md-offset-2': isCol2, 'col-md-offset-3': isCol3}">
+          <div style="float: right">
+            <div ng-hide="isLoggedIn">
+              <a href="#login" style="color: #3BAFDA; text-transform: uppercase; font-weight: 700; cursor:pointer;">login</a>
+              <span id="slash">/</span>
+              <a href="#register" style="color: #3BAFDA; text-transform: uppercase; font-weight: 700;">Sign up</a>
+            </div>
+            <div ng-show="isLoggedIn" style="color: #3BAFDA; text-transform: uppercase; font-weight: 700;">
+              <p>Welkom, {{user.name}} <button ng-click="logout()" style="color: white; text-transform: uppercase; font-weight: 700; margin-left:10px;" class="btn btn-primary">Log uit</button></p> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="row" style="margin-top: 6em">
+      <div ng-class="{'col-md-2': isCol2, 'col-md-3': isCol3}" ng-style="hidden" id="side-menu">
+        <nav id="dr-menu" class="dr-menu" ng-class="{'dr-menu-open': isOpenMenu}">
+          <div class="dr-trigger" ><span class="dr-icon dr-icon-menu" ng-click="hideMenu()"></span><a class="dr-label" ng-click="showMenu()">Mathmate</a></div>
+          <ul>
+            <li><a href="#home"><span class="fa fa-home"></span> Home</a></li>
+            <li ng-repeat="menuitem in menulijst">
+
+              <a ng-href="{{menuitem.url}}" ng-class="{hidelink: !isLoggedIn}"><span class="{{menuitem.icon}}"></span> {{menuitem.naam}}</a>
+            </li>
+          
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="col-md-9">
+        <div id="main" ng-controller="MainCtrl">
+      
+          <div ng-view></div>
+          <div class="row">
+            <div class="col-md-12">
+
+              <footer id="footer1" style="text-align:center; border-top: 1px solid #CCD1D9;">
+                <span class="fa fa-code"></span>
+                <span>Copyright &copy;</span>
+                <a href="" class="link">MathMate</a>
+              </footer>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer2">
+      <a href="https://github.com/fbouakline/mathmate"><span class="fa fa-github"></span></a>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+  
+    
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.3.0/firebase-simple-login.js'></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/menu.js"></script>
+        <script src="scripts/controllers/rekenen.js"></script>
+        <script src="scripts/controllers/generate.js"></script>
+        <script src="scripts/controllers/klasse6.js"></script>
+        <script src="scripts/controllers/games.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/register.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

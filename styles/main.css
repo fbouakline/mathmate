@@ -1,0 +1,674 @@
+/* line 1, partials/_reset.scss */
+.row {
+  margin: 0;
+}
+
+/* line 1, partials/_cursor.scss */
+canvas {
+  cursor: url(../images/cursor/cursor2.png), auto;
+}
+
+/* line 5, partials/_cursor.scss */
+#next {
+  cursor: url(../images/cursor/click2.gif), auto;
+}
+
+/* line 1, partials/_menu.scss */
+#side-menu {
+  border-right: 1px solid  #CCD1D9;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+/* line 8, partials/_menu.scss */
+.dr-menu {
+  margin-top: -2em;
+  width: 100%;
+  max-width: 400px;
+  /*  min-width: 300px;*/
+  position: relative;
+  font-size: 1.3em;
+  line-height: 2.5;
+  font-weight: 400;
+  color: #fff;
+  padding-top: 1.5em;
+}
+
+/* line 21, partials/_menu.scss */
+.dr-menu > div {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 28, partials/_menu.scss */
+.dr-menu > div .dr-icon {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-size: 150%;
+  line-height: 1.6;
+  padding: 0 10px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* line 40, partials/_menu.scss */
+.dr-menu.dr-menu-open > div .dr-icon {
+  color: #3bafda;
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/* line 49, partials/_menu.scss */
+.dr-menu > div .dr-icon:after {
+  content: "\f0dd";
+  position: absolute;
+  font-size: 45%;
+  line-height: 3.5;
+  left: -10%;
+  opacity: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-weight: 900;
+}
+
+/* line 63, partials/_menu.scss */
+.dr-menu.dr-menu-open > div .dr-icon:after {
+  opacity: 1;
+}
+
+/* line 67, partials/_menu.scss */
+.dr-menu > div .dr-label {
+  padding-left: 3em;
+  position: relative;
+  display: block;
+  color: #3BAFDA;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 2.75;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* line 82, partials/_menu.scss */
+.dr-menu.dr-menu-open > div .dr-label {
+  -webkit-transform: translateY(-90%);
+  -moz-transform: translateY(-90%);
+  -ms-transform: translateY(-90%);
+  transform: translateY(-90%);
+}
+
+/* line 89, partials/_menu.scss */
+.dr-menu ul {
+  padding: 0;
+  margin: 0 3em 0 0;
+  list-style: none;
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0s linear 205ms;
+  -moz-transition: opacity 0s linear 205ms;
+  transition: opacity 0s linear 205ms;
+}
+
+/* line 102, partials/_menu.scss */
+.dr-menu.dr-menu-open ul {
+  opacity: 1;
+  z-index: 200;
+  pointer-events: auto;
+  -webkit-transition: opacity 0s linear 0s;
+  -moz-transition: opacity 0s linear 0s;
+  transition: opacity 0s linear 0s;
+}
+
+/* line 111, partials/_menu.scss */
+.dr-menu ul li {
+  display: block;
+  margin: 0 0 5px 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 120, partials/_menu.scss */
+.dr-menu.dr-menu-open ul li {
+  opacity: 1;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(2) {
+  -webkit-transition-delay: 35ms;
+  -moz-transition-delay: 35ms;
+  transition-delay: 35ms;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(3) {
+  -webkit-transition-delay: 70ms;
+  -moz-transition-delay: 70ms;
+  transition-delay: 70ms;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(4) {
+  -webkit-transition-delay: 105ms;
+  -moz-transition-delay: 105ms;
+  transition-delay: 105ms;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(5) {
+  -webkit-transition-delay: 140ms;
+  -moz-transition-delay: 140ms;
+  transition-delay: 140ms;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(6) {
+  -webkit-transition-delay: 175ms;
+  -moz-transition-delay: 175ms;
+  transition-delay: 175ms;
+}
+
+/* line 127, partials/_menu.scss */
+#dr-menu.dr-menu-open ul li:nth-child(7) {
+  -webkit-transition-delay: 210ms;
+  -moz-transition-delay: 210ms;
+  transition-delay: 210ms;
+}
+
+/* line 134, partials/_menu.scss */
+.dr-menu ul li a {
+  display: inline-block;
+  padding: 0 20px;
+  color: #656d78;
+}
+
+/* line 140, partials/_menu.scss */
+.dr-menu ul li a:hover {
+  color: #3bafda;
+}
+
+/* line 145, partials/_menu.scss */
+.dr-icon:before,
+.dr-icon:after {
+  position: relative;
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 156, partials/_menu.scss */
+.dr-menu ul .dr-icon:before {
+  margin-right: 15px;
+}
+
+/* line 160, partials/_menu.scss */
+.dr-icon-menu:before {
+  content: "\f0c9";
+  font-weight: bold;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+/* line 167, partials/_menu.scss */
+.hidelink {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* line 1, partials/_footer.scss */
+#footer1 {
+  color: #9A9994;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+/* line 6, partials/_footer.scss */
+#footer1 a {
+  color: #0B0B0A;
+}
+
+/* line 12, partials/_footer.scss */
+#footer2 {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-size: 2em;
+}
+/* line 17, partials/_footer.scss */
+#footer2 .fa {
+  font-size: 1.2em;
+}
+/* line 20, partials/_footer.scss */
+#footer2 .fa.fa-github {
+  color: black;
+  font-size: 1em;
+}
+/* line 25, partials/_footer.scss */
+#footer2 .fa.fa-facebook-square {
+  color: #8b9dc3;
+  font-size: 1em;
+}
+
+/* line 4, partials/_rad.scss */
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 0.8em solid transparent;
+  border-right: 0.8em solid transparent;
+  border-top: 1.6em solid #356a78;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.8em;
+}
+
+/* line 14, partials/_rad.scss */
+.rad {
+  margin-top: 2em;
+}
+
+/* line 18, partials/_rad.scss */
+#total_wrap {
+  margin-top: 3em;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  border: 10px solid #3BAFDA;
+  height: auto;
+  font-family: verdana;
+  color: #356a78;
+  padding: 0;
+  font-weight: bold;
+  border-image: url(../images/rad/border_total.png) 30 30 round;
+}
+
+/* line 34, partials/_rad.scss */
+#total {
+  font-size: 10em;
+}
+
+/* line 38, partials/_rad.scss */
+#draai {
+  display: block;
+  border: 0;
+  background: #058DFC;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+/* line 50, partials/_rad.scss */
+#draai:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+/* line 2, partials/_login.scss */
+#login_wrapper input {
+  outline: none;
+}
+/* line 6, partials/_login.scss */
+#login_wrapper #wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+/* line 12, partials/_login.scss */
+#login_wrapper #box {
+  width: 345px;
+  height: 450px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 3px;
+}
+/* line 22, partials/_login.scss */
+#login_wrapper #top_header {
+  width: 100%;
+  margin: 0;
+  padding-top: 45px;
+}
+/* line 28, partials/_login.scss */
+#login_wrapper #top_header > h3 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #378DE5;
+  -webkit-text-stroke: 0.5px;
+  margin: 0;
+}
+/* line 39, partials/_login.scss */
+#login_wrapper #top_header > h5 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #378DE5;
+  line-height: 1.6;
+  margin: 0;
+  padding: 15px 0;
+  color: #555;
+  -webkit-text-stroke: 0.2px;
+}
+/* line 52, partials/_login.scss */
+#login_wrapper #inputs {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 59, partials/_login.scss */
+#login_wrapper input[type=text], #login_wrapper input[type=password], #login_wrapper button {
+  width: 300px;
+  height: 55px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: -10px;
+  padding: 15px;
+  box-sizing: border-box;
+  -webkit-text-stroke: 0.1px;
+}
+/* line 71, partials/_login.scss */
+#login_wrapper input[type=text], #login_wrapper input[type=password] {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: thin solid #ccc;
+  border-radius: 5px;
+  color: #378DE5;
+}
+/* line 80, partials/_login.scss */
+#login_wrapper input[type=text]:focus, #login_wrapper input[type=password]:focus {
+  border: thin solid #378DE5;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+/* line 88, partials/_login.scss */
+#login_wrapper input[type=text]:focus, #login_wrapper input[type=password]:focus {
+  border-left: thin solid #378DE5;
+}
+/* line 93, partials/_login.scss */
+#login_wrapper button {
+  color: #378DE5;
+  background-color: #fff;
+  border: 1px solid #378DE5;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  transition: all .3s ease;
+  margin-top: 0px;
+  cursor: pointer;
+}
+/* line 106, partials/_login.scss */
+#login_wrapper button:hover {
+  background-color: #378DE5;
+  color: #fff;
+}
+/* line 111, partials/_login.scss */
+#login_wrapper #bottom {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+/* line 117, partials/_login.scss */
+#login_wrapper a {
+  text-decoration: none;
+  color: #282828;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  transition: color .3s ease;
+  outline: none;
+}
+/* line 127, partials/_login.scss */
+#login_wrapper a:hover {
+  color: #1eb056;
+}
+/* line 131, partials/_login.scss */
+#login_wrapper .right_a {
+  float: right;
+}
+
+/* line 136, partials/_login.scss */
+#login {
+  color: #3BAFDA;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* line 142, partials/_login.scss */
+#slash {
+  color: #3BAFDA;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 147, partials/_login.scss */
+#registrer {
+  color: #3BAFDA;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 152, partials/_login.scss */
+#loggedin {
+  color: #3BAFDA;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 1, partials/_404.scss */
+#container {
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  width: auto;
+  overflow: hidden;
+  z-index: 1;
+  animation: noise-3 1.5s linear infinite;
+}
+
+/* line 13, partials/_404.scss */
+#container:after {
+  animation: noise-1 .2s linear infinite;
+}
+
+/* line 17, partials/_404.scss */
+.deloreanblue {
+  height: 130%;
+  background: url("../images/404/delorean_blue.png") fixed center;
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background-blend-mode: luminosity;
+}
+
+/* line 27, partials/_404.scss */
+.deloreanred {
+  height: 130%;
+  background: url("../images/404/delorean_red_2_4.png") fixed center;
+  opacity: .85;
+  background-blend-mode: luminosity;
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  -webkit-transform: translateZ(60px);
+  transform: translateZ(60px);
+}
+
+/* line 39, partials/_404.scss */
+.text-container {
+  position: fixed;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  user-select: all;
+  font-size: 1.5em;
+  top: 0;
+  text-shadow: 0 0 30px #111111;
+}
+
+/* line 56, partials/_404.scss */
+h1 {
+  font-size: 6em;
+  margin-bottom: -.2em;
+  margin-left: -.2em;
+  font-weight: 900;
+  padding-top: 0;
+}
+
+/* line 65, partials/_404.scss */
+.back {
+  display: block;
+  position: relative;
+  width: 35%;
+  margin: 10px auto 0 auto;
+  overflow: hidden;
+  border-radius: 3px;
+  height: auto;
+  border: 3px solid #fff;
+  transition: all .2s ease-in-out;
+  padding: 10px 0 15px 0;
+}
+
+/* line 79, partials/_404.scss */
+.back:hover {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+@keyframes noise-3 {
+  /* line 87, partials/_404.scss */
+  0%,3%,5%,42%,44%,100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  /* line 88, partials/_404.scss */
+  4.3% {
+    opacity: 1;
+    transform: scaleY(4);
+  }
+
+  /* line 89, partials/_404.scss */
+  43% {
+    opacity: 1;
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+
+@keyframes noise-1 {
+  /* line 93, partials/_404.scss */
+  0%, 20%, 40%, 60%, 70%, 90% {
+    opacity: 1;
+  }
+
+  /* line 94, partials/_404.scss */
+  10% {
+    opacity: .1;
+  }
+
+  /* line 95, partials/_404.scss */
+  50% {
+    opacity: .5;
+    left: -6px;
+  }
+
+  /* line 96, partials/_404.scss */
+  80% {
+    opacity: .3;
+  }
+
+  /* line 97, partials/_404.scss */
+  100% {
+    opacity: .6;
+    left: 2px;
+  }
+}
+
+/* line 1, partials/_dart.scss */
+#replay {
+  display: none;
+  position: absolute;
+  font-weight: 900;
+  font-family: verdana;
+  left: 500px;
+  top: 360px;
+  color: #3BAFDA;
+  width: 100px;
+}
+
+/* line 10, partials/_dart.scss */
+#board {
+  position: absolute;
+  z-index: -99;
+  left: 840px;
+  top: 110px;
+  width: 70px;
+}
+
+/* line 18, partials/_dart.scss */
+#points {
+  display: none;
+  position: absolute;
+  font-weight: 900;
+  font-family: verdana;
+  left: 320px;
+  top: 360px;
+  color: white;
+  width: 200px;
+}
+
+/* line 28, partials/_dart.scss */
+#dart {
+  position: absolute;
+  z-index: 9999;
+  top: 300px;
+}
+
+/* line 33, partials/_dart.scss */
+#win {
+  position: absolute;
+  z-index: 9999999;
+  top: 200px;
+  left: 120px;
+  display: none;
+}

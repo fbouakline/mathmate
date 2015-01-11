@@ -1,0 +1,29 @@
+#footer1 {
+  color: #9A9994;
+  margin-top: 2em;
+  padding-top:1em;
+  padding-bottom: 1em;
+  a {
+    color: #0B0B0A;
+  }
+
+}
+
+#footer2 {
+  position: fixed;
+  bottom:0.5em;
+  right:0.5em;
+  font-size: 2em;
+  .fa {
+    font-size: 1.2em;
+  }
+  .fa.fa-github{
+    color: black;
+    font-size:1em;
+  }
+
+  .fa.fa-facebook-square{
+    color:#8b9dc3;
+    font-size: 1em;
+  }
+}

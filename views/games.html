@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img class="img-rounded" src="images/thumbnail/sunwukong.png">
+      <div class="caption text-center">
+        <h3>Shoot the pig</h3>
+        <p>In het spel "Shoot the pig" speel je als sun wukong die de evil pig tegemoet komt. De evil pig blokkert sun wukong, waardoor sun wukong een spreuk doet om een haar naar een cannon te veranderen, zodat u de evil pig weg kunt shieten.
+        <h3>bediening</h3> Door middel met de muis kan je de kanon bewegen. De snelheid van de kanon wordt bepaald door de afstand van de kanon tot de muis klik</p>
+        <p><a href="" class="btn btn-warning" role="button" data-toggle="modal" data-target="#myModal" id="open">Speel</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img class="img-rounded" src="images/thumbnail/dart2.png">
+      <div class="caption text-center">
+        <h3>Darten</h3>
+        <p>Gooi pijlen naar een dartbord, speel hier het spel darten</p>
+        <h3>Bediening</h3>
+        <p>Door middel van de muis kun je de dart bewegen. De snelheid wordt bepaalt, hoelang de muis ingedrukt is. waneer je de muis los laat schiet de dart. </p>
+        <br>
+        <p><a href="#dart" class="btn btn-warning" role="button">Speel dart</a></p>
+      </div>
+
+  </div>
+</div>
+</div>
+
+<!-- Shoot the pig -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
+  </div>
+  <div class="modal-dialog" style="width:auto; margin: 40px auto;">
+
+    <img src="images/background.png" alt="" style="position: absolute; z-index:-999" id="background">
+
+    <canvas id="canvas" width="600" height="400" ></canvas>
+    <div id="next" style="position: absolute; top:470px; left:850px; font-size: 20px; color: black; font-family:verdana;"><span style="font-size:25px;" class="fa fa fa-angle-double-right"></span></div>
+  </div>
+</div>
+
+<script src="scripts/shoot_the_pig.js"></script>
+
+<!-- End Shoot the pig -->
+

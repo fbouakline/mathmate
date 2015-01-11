@@ -1,0 +1,55 @@
+$pointer_width: 0.8em;
+$pointer_color: #356a78;
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: $pointer_width solid transparent;
+  border-right: $pointer_width solid transparent;
+  border-top: $pointer_width * 2 solid $pointer_color;
+  position: absolute;
+  left: 50%;
+  margin-left: -$pointer_width;
+}
+.rad {
+  margin-top: 2em;
+}
+
+#total_wrap {
+  margin-top: 3em;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  border: 10px solid #3BAFDA;
+  height: auto;
+  font-family: verdana;
+  color:#356a78;
+  padding:0;
+  font-weight: bold;
+  border-image: url(../images/rad/border_total.png) 30 30 round;
+
+
+}
+
+#total{
+  font-size: 10em;
+}
+
+#draai{
+  display: block;
+  border: 0;
+  background: #058DFC;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+  &:active{
+    box-shadow: 0 2px 0 #006599;
+ transform: translateY(3px);
+  }
+  
+}
