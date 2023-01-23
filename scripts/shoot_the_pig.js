@@ -109,7 +109,7 @@ var spriteImage = document.createElement('IMG');
 spriteImage.src = "images/sprites/sun_standby.png";
 
 var winImage = document.createElement('IMG');
-winImage.src = "images/dart/you_win.png";
+winImage.src = "images/sprites/victory.png";
 
 sunsprite = sprite({
 	context: context,
