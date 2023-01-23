@@ -424,7 +424,7 @@ function draw(){
 			pigdead.render();
 
 		}
-		context.drawImage(winImage, 300, 150);
+		context.drawImage(winImage, 320, 0, 750, 550);
 	}
 	
 
