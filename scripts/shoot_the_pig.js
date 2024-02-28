@@ -301,7 +301,7 @@ var game = {
 		2: new dialogUpdate('Show yourself !!!','images/char/sun_angry.png', true ),
 		3: new dialogUpdate('* The evil pig is blocking your way *','images/char/sun_angry.png', false ),
 		4: new dialogUpdate('You ignorant pig .. !!','images/char/sun_angry.png', true ),
-		5: new dialogUpdate('How dare you to block my way','images/char/sun_angry.png', true ),
+		5: new dialogUpdate('How dare you block my way','images/char/sun_angry.png', true ),
 		6: new dialogUpdate('* The great sage pulls a hair from his body * ',"images/char/sun_angry.png", false, 550 ),
 		7: new dialogUpdate('* Chews it up, spit it up, says the magic spell .. ',"images/char/sun_angry.png", false, 550 ),
 		8: new dialogUpdate('.. and shouts "change" * ','images/char/sun_angry.png', false, 550 ),
